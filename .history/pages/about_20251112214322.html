@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starbucks - Products</title>
+  <title>Starbucks - About</title>
   <link rel="icon" type="image/png" href="../images/Logo-Starbucks-Black.png">
   <link rel="stylesheet" href="../main.css">
 </head>
@@ -16,10 +16,10 @@
       </a>
       <span class="spacer"></span>
       <ul>
-        <li><a href="../pages/index.html">Home</a></li>
-        <li><a href="../pages/about.html">About</a></li>
-        <li id="products-li" class="current">
-          <a href="../pages/products.html">Products</a>
+        <li><a href="./pages/index.html">Home</a></li>
+        <li class="current"><a href="./pages/about.html">About</a></li>
+        <li id="products-li">
+          <a href="./pages/products.html">Products</a>
           <!-- Submenu -->
           <ul id="products-menu">
             <li><a href="#">Drinks</a></li>
@@ -33,50 +33,31 @@
   </header>
 
   <!------------------------------------ Content -------------------------------->
-  <main class="products-main">
-    <h1 class="products-subtitle">Products</h1>
+  <main class="about-main">
+    <!-- page title  -->
+    <h1 class="about-subtitle">About</h1>
 
-    <section class="products-content">
-      <!-- Imagen flotada a la izquierda -->
+    <section class="about-content">
       <img
-        src="../images/Home-Body-2.jpg"
-        alt="Espresso coffee in a small cup"
+        src="../images/about-coffee.jpg"
+        alt="Barista preparing a cup of coffee"
         class="img-float-left"
       >
-
-      <!-- Imagen flotada a la derecha -->
-      <img
-        src="../images/Home-Body-3.jpg"
-        alt="Frappuccino with whipped cream"
-        class="img-float-right"
-      >
-
-      <!-- Texto que envuelve ambas imágenes flotadas -->
-      <p class="products-text">
-        Our menu includes a variety of handcrafted beverages, from rich and
-        bold espresso shots to refreshing Frappuccinos. Each drink is prepared
-        by our baristas with care, so you can find the perfect flavor for any
-        moment of the day.
+      <p class="about-text">
+        Our Starbucks-inspired coffee shop is a cozy place where you can enjoy
+        handcrafted beverages, freshly baked pastries, and a warm atmosphere.
+        We focus on high-quality coffee beans, ethical sourcing, and friendly
+        service so that every visit feels special.
       </p>
-      <p class="products-text">
-        We also offer seasonal specials, plant-based options, and customizable
-        drinks so you can adjust sweetness, temperature, and milk type to fit
-        your taste and lifestyle.
-      </p>
-
-      <!-- Tercera imagen que limpia ambos floats -->
-      <img
-        src="../images/Home-Body-4.jpg"
-        alt="Bag of coffee beans"
-        class="product-image-clear"
-      >
-      <p class="products-text">
-        Take the Starbucks experience home with our whole bean and ground
-        coffees. Brew your favorite blend in your own kitchen and enjoy the
-        same aroma and flavor that you love in our café.
+      <p class="about-text">
+        Whether you are catching up with friends, working on your laptop, or
+        taking a quiet moment for yourself, our space is designed to make you
+        feel welcome. Grab your favorite drink, find a comfortable seat, and
+        make this café your home away from home.
       </p>
     </section>
 
+    <!-- button back to top -->
     <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
   </main>
 

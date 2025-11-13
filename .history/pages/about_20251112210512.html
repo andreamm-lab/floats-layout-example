@@ -12,14 +12,16 @@
   <header>
     <nav aria-label="Primary navigation">
       <a href="../index.html">
-        <img src="../images/Logo-Starbucks-White.png" alt="Logo">
+        <!-- CORREGIDO: ruta de la imagen -->
+        <img src="../images/Logo-Starbucks-Golden.png" alt="Logo">
       </a>
       <span class="spacer"></span>
       <ul>
+        <!-- CORREGIDOS: href relativos -->
         <li><a href="../index.html">Home</a></li>
-        <li class="current"><a href="../pages/about.html">About</a></li>
+        <li class="current"><a href="./about.html">About</a></li>
         <li id="products-li">
-          <a href="../pages/products.html">Products</a>
+          <a href="./products.html">Products</a>
           <!-- Submenu -->
           <ul id="products-menu">
             <li><a href="#">Drinks</a></li>
@@ -27,7 +29,7 @@
             <li><a href="#">At Home</a></li>
           </ul>
         </li>
-        <li><a href="../pages/contact.html">Contact</a></li>
+        <li><a href="./contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -37,23 +39,24 @@
     <!-- page title  -->
     <h1 class="about-subtitle">About</h1>
 
+    <!-- CONTENIDO CON IMAGEN FLOTADA A LA IZQUIERDA -->
     <section class="about-content">
       <img
-        src="../images/Home-Body-1.jpg"
-        alt="Barista preparing a cup of coffee"
-        class="img-float-left"
+        src="../images/about-store.jpg"
+        alt="Inside our coffee shop"
+        class="about-image float-left"
       >
-      <p class="about-text">
-        Our Starbucks-inspired coffee shop is a cozy place where you can enjoy
-        handcrafted beverages, freshly baked pastries, and a warm atmosphere.
-        We focus on high-quality coffee beans, ethical sourcing, and friendly
-        service so that every visit feels special.
+      <p>
+        Our café is inspired by the idea of creating a warm and welcoming space
+        where everyone can enjoy a cup of coffee, relax, and connect. From the
+        selection of our beans to the music that plays in the background, every
+        detail is carefully chosen.
       </p>
-      <p class="about-text">
-        Whether you are catching up with friends, working on your laptop, or
-        taking a quiet moment for yourself, our space is designed to make you
-        feel welcome. Grab your favorite drink, find a comfortable seat, and
-        make this café your home away from home.
+      <p>
+        We work closely with local and international suppliers to bring you
+        high-quality products, and our baristas are trained to prepare each drink
+        with care. Whether you are here to study, meet a friend, or simply take
+        a break, we want you to feel at home.
       </p>
     </section>
 

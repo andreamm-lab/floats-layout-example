@@ -12,15 +12,14 @@ body {
     background-color: #ffffff;
     color: #000;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: block;          
+    flex-direction: column;  
 }
 
-/* MAIN: que empuje el footer abajo */
 main {
-    flex: 1;
     display: block;
-    padding: 120px 32px 24px; /* top=120 para que no lo tape el header fijo */
+    padding: 120px 32px 24px;
+    min-height: calc(100vh - 160px); 
 }
 
 /* 1.---------------------- Header ---------------------- */
@@ -37,10 +36,11 @@ header nav {
     padding: 10px 32px;
     min-height: 80px;
     background-color: #0d5c1c;
-    display: flex;
+    display: block;      
     align-items: center;
     justify-content: space-between;
 }
+
 
 /* Icon - Image */
 header nav img {
@@ -52,9 +52,10 @@ header nav img {
 /* Menu horizontal */
 header nav ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
+    display: inline-block;   
+    gap: 20px;               
 }
+
 
 /* links del header (base) */
 header nav ul li a {
@@ -143,12 +144,18 @@ header nav ul li.current > a::after {
     color: #fdc722;
 }
 
-/* 1.2. Side menu (para otras páginas, lo dejo igual) */
+/* 1.2. Side menu */
 .page {
-    display: flex;
+    display: block;          
     flex-direction: row-reverse;
     gap: 0;
 }
+/* NUEVO: items del menú del header en línea */
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
 
 .main-content {
     width: 72%;
@@ -294,7 +301,7 @@ header nav ul li.current > a::after {
 
 /* 4.---------------------- About / Contact / Products ---------------------- */
 
-/* contenedores principales (cuerpo de las páginas) */
+/* Contenedores principales centrados */
 .about-main,
 .contact-main,
 .products-main {
@@ -302,42 +309,56 @@ header nav ul li.current > a::after {
     margin: 0 auto;
 }
 
-/* títulos de sección */
+/* Subtítulos de página */
 .about-subtitle,
 .contact-subtitle,
 .products-subtitle {
-    margin-top: 70px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 16px;
 }
 
-/* textos de contenido */
-.about-text,
-.contact-text,
-.products-text {
-    line-height: 1.6;
-    margin-bottom: 16px;
+/* Texto general de las secciones */
+.about-main p,
+.contact-main p,
+.products-main p {
+    margin-bottom: 12px;
+    text-align: justify;
 }
 
-/* imágenes flotadas reutilizables */
-.img-float-left {
+/* Imágenes flotadas */
+.float-left {
     float: left;
-    width: 220px;
-    margin: 0 16px 16px 0;
-    display: block;
+    margin: 0 16px 8px 0;
 }
 
-.img-float-right {
+.float-right {
     float: right;
-    width: 220px;
-    margin: 0 0 16px 16px;
-    display: block;
+    margin: 0 0 8px 16px;
 }
 
-/* tercera imagen en Products que limpia los floats */
-.product-image-clear {
+/* Tamaños de imágenes de contenido */
+.about-image,
+.contact-image,
+.product-image {
+    max-width: 40%;
+    height: auto;
+}
+
+/* Para products, un poco más pequeñas si quieres */
+.products-content .product-image {
+    max-width: 30%;
+}
+
+/* Clear de floats al final de cada main de contenido */
+.about-main::after,
+.contact-main::after,
+.products-main::after {
+    content: "";
     display: block;
-    max-width: 320px;
-    margin: 24px auto 16px;
+    clear: both;
+}
+
+/* Bloque que limpia ambos floats (usado en Products) */
+.clear-both {
     clear: both;
 }

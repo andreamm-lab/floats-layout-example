@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starbucks - Products</title>
+  <link rel="icon" type="image/png" href="../images/Logo-Starbucks-Black.png">
+  <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+  <!------------------------------------ Header -------------------------------->
+  <header>
+    <nav aria-label="Primary navigation">
+      <a href="../index.html">
+        <img src="../images/Logo-Starbucks-Golden.png" alt="Logo">
+      </a>
+      <span class="spacer"></span>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li id="products-li" class="current">
+          <a href="./products.html">Products</a>
+          <ul id="products-menu">
+            <li><a href="#">Drinks</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">At Home</a></li>
+          </ul>
+        </li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!------------------------------------ Content -------------------------------->
+  <main class="products-main">
+    <h1 class="products-subtitle">Products</h1>
+
+    <section class="products-content">
+      <!-- IMAGEN FLOTADA A LA IZQUIERDA -->
+      <img
+        src="../images/product-drink.jpg"
+        alt="Signature coffee drink"
+        class="product-image float-left"
+      >
+      <!-- IMAGEN FLOTADA A LA DERECHA -->
+      <img
+        src="../images/product-food.jpg"
+        alt="Fresh bakery item"
+        class="product-image float-right"
+      >
+
+      <p>
+        Our menu includes a wide variety of handcrafted beverages, from classic
+        espresso drinks to seasonal creations. Each drink is made to order, so
+        you can customize sweetness, milk options, and temperature to match your
+        preferences.
+      </p>
+      <p>
+        We also offer freshly baked pastries and light meals that pair perfectly
+        with your favorite drink. Whether you’re looking for a quick breakfast
+        or an afternoon snack, you’ll find something delicious to enjoy.
+      </p>
+
+      <!-- TERCER IMAGEN + CONTENIDO QUE HACE CLEAR DE AMBOS FLOATS -->
+      <p class="clear-both">
+        <img
+          src="../images/product-beans.jpg"
+          alt="Coffee beans for home brewing"
+          class="product-image"
+        >
+        For coffee lovers who want to bring the experience home, we provide a
+        selection of whole-bean and ground coffee. You can choose from different
+        origins and roast levels, and our staff will be happy to help you find
+        the perfect match for your brewing method.
+      </p>
+    </section>
+  </main>
+
+  <!---------------------------------- Footer ------------------------------------>
+  <footer id="main-footer">
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="#">Privacy Notice</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Accessibility</a></li>
+        <li><a href="#">Cookie Preferences</a></li>
+      </ul>
+    </nav>
+
+    <hr class="footer-line">
+
+    <p>© 2025 Starbucks Coffee Company. All rights reserved</p>
+  </footer>
+</body>
+</html>

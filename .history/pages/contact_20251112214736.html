@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starbucks</title>
-  <link rel="icon" type="image/png" href="./images/Logo-Starbucks-Green.png">
-  <link rel="stylesheet" href="./main.css">
+  <title>Starbucks - Contact</title>
+  <link rel="icon" type="image/png" href="../images/Logo-Starbucks-Black.png">
+  <link rel="stylesheet" href="../main.css">
 </head>
 <body>
   <!------------------------------------ Header -------------------------------->
   <header>
     <nav aria-label="Primary navigation">
-      <a href="./index.html">
-        <img src="./images/Logo-Starbucks-White.png" alt="Logo">
+      <a href="../index.html">
+        <img src="./images/Logo-Starbucks-Golden.png" alt="Logo">
       </a>
       <span class="spacer"></span>
       <ul>
-        <li class="current"><a href="./index.html">Home</a></li>
+        <li><a href="./pages/index.html">Home</a></li>
         <li><a href="./pages/about.html">About</a></li>
         <li id="products-li">
           <a href="./pages/products.html">Products</a>
@@ -27,27 +27,36 @@
             <li><a href="#">At Home</a></li>
           </ul>
         </li>
-        <li><a href="./pages/contact.html">Contact</a></li>
+        <li class="current"><a href="./pages/contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
- <!------------------------------------ Content -------------------------------->
-  <main class="home-main">
+  <!------------------------------------ Content -------------------------------->
+  <main class="contact-main">
+    <h1 class="contact-subtitle">Contact</h1>
 
-    <section class="section-a">
-      <!-- sticky note -->
-      <div class="home-sticky-box">
-        It's a great day for coffee!
-      </div>
-
-      <!-- page title  -->
-      <h2 class="home-subtitle">Home Page</h2>
+    <section class="contact-content">
+      <img
+        src="../images/contact-barista.jpg"
+        alt="Barista serving a customer at the counter"
+        class="img-float-right"
+      >
+      <p class="contact-text">
+        We would love to hear from you! If you have any questions, comments, or
+        suggestions about our coffee, food, or service, feel free to reach out.
+        Your feedback helps us create a better experience for everyone.
+      </p>
+      <p class="contact-text">
+        <strong>Email:</strong> contact@starbucks-cafe.example<br>
+        <strong>Phone:</strong> +1 (604) 123-4567<br>
+        <strong>Address:</strong> 123 Coffee Street, Vancouver, BC
+      </p>
     </section>
 
-    <!-- button back to top -->
     <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
   </main>
+
   <!---------------------------------- Footer ------------------------------------>
   <footer id="main-footer">
     <nav aria-label="Footer navigation">

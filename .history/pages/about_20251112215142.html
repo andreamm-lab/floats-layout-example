@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starbucks</title>
-  <link rel="icon" type="image/png" href="./images/Logo-Starbucks-Green.png">
-  <link rel="stylesheet" href="./main.css">
+  <title>Starbucks - About</title>
+  <link rel="icon" type="image/png" href="../images/Logo-Starbucks-Black.png">
+  <link rel="stylesheet" href="../main.css">
 </head>
 <body>
   <!------------------------------------ Header -------------------------------->
   <header>
     <nav aria-label="Primary navigation">
-      <a href="./index.html">
-        <img src="./images/Logo-Starbucks-White.png" alt="Logo">
+      <a href="../index.html">
+        <img src="../images/Logo-Starbucks-White.png" alt="Logo">
       </a>
       <span class="spacer"></span>
       <ul>
-        <li class="current"><a href="./index.html">Home</a></li>
-        <li><a href="./pages/about.html">About</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li class="current"><a href="./pages/about.html">About</a></li>
         <li id="products-li">
           <a href="./pages/products.html">Products</a>
           <!-- Submenu -->
@@ -32,22 +32,35 @@
     </nav>
   </header>
 
- <!------------------------------------ Content -------------------------------->
-  <main class="home-main">
+  <!------------------------------------ Content -------------------------------->
+  <main class="about-main">
+    <!-- page title  -->
+    <h1 class="about-subtitle">About</h1>
 
-    <section class="section-a">
-      <!-- sticky note -->
-      <div class="home-sticky-box">
-        It's a great day for coffee!
-      </div>
-
-      <!-- page title  -->
-      <h2 class="home-subtitle">Home Page</h2>
+    <section class="about-content">
+      <img
+        src="../images/about-coffee.jpg"
+        alt="Barista preparing a cup of coffee"
+        class="img-float-left"
+      >
+      <p class="about-text">
+        Our Starbucks-inspired coffee shop is a cozy place where you can enjoy
+        handcrafted beverages, freshly baked pastries, and a warm atmosphere.
+        We focus on high-quality coffee beans, ethical sourcing, and friendly
+        service so that every visit feels special.
+      </p>
+      <p class="about-text">
+        Whether you are catching up with friends, working on your laptop, or
+        taking a quiet moment for yourself, our space is designed to make you
+        feel welcome. Grab your favorite drink, find a comfortable seat, and
+        make this café your home away from home.
+      </p>
     </section>
 
     <!-- button back to top -->
     <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
   </main>
+
   <!---------------------------------- Footer ------------------------------------>
   <footer id="main-footer">
     <nav aria-label="Footer navigation">

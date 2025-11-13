@@ -6,21 +6,35 @@
     padding: 0;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 /* All Font Page */
 body {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     background-color: #ffffff;
     color: #000;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: block;          
 }
 
-/* MAIN: que empuje el footer abajo */
+/* Sticky Footer Containers */
+#page-container {
+    min-height: 100%;
+    position: relative;
+}
+
+#content-wrap {
+    padding-bottom: 160px; /* espacio suficiente para el footer */
+}
+
+/* MAIN CONTENT */
 main {
-    flex: 1;
     display: block;
     padding: 120px 32px 24px; /* top=120 para que no lo tape el header fijo */
+    /* QUITADO: min-height calc(...) */
 }
 
 /* 1.---------------------- Header ---------------------- */
@@ -37,9 +51,7 @@ header nav {
     padding: 10px 32px;
     min-height: 80px;
     background-color: #0d5c1c;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: block;      
 }
 
 /* Icon - Image */
@@ -52,17 +64,21 @@ header nav img {
 /* Menu horizontal */
 header nav ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
+    display: inline-block;   
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
 }
 
 /* links del header (base) */
 header nav ul li a {
     color: white;
-    position: relative;      /* para la línea */
-    text-decoration: none;   /* sacamos subrayado normal */
+    position: relative;
+    text-decoration: none;
     display: inline-block;
-    padding-bottom: 4px;     /* un poco de espacio para la línea */
+    padding-bottom: 4px;
 }
 
 /* línea corta debajo del link */
@@ -78,7 +94,7 @@ header nav ul li a::after {
     transition: transform 0.2s ease-in-out;
 }
 
-/* hover: muestra línea y cambia color */
+/* hover */
 header nav ul li:hover > a {
     color: #fdc722;
 }
@@ -87,7 +103,7 @@ header nav ul li:hover:not(.current) > a::after {
     transform: translateX(-50%) scaleX(1);
 }
 
-/* página actual: el li tiene .current */
+/* página actual */
 header nav ul li.current > a {
     color: #f1d06d;
     font-weight: bold;
@@ -114,7 +130,6 @@ header nav ul li.current > a::after {
     top: 100%;
     left: 0;
     z-index: 2000;
-    margin: 0;
     padding: 4px 16px;
     background-color: #247132;
     visibility: hidden;
@@ -122,12 +137,11 @@ header nav ul li.current > a::after {
     transform: translateY(-6px);
     transition: opacity 0.3s, transform 0.15s;
     list-style: none;
-    display: block; /* evita que herede el flex del menú principal */
+    display: block;
 }
 
 #products-menu li {
     display: block;
-    margin: 0;
     padding: 4px 0;
 }
 
@@ -139,15 +153,12 @@ header nav ul li.current > a::after {
 }
 
 #products-menu a:hover {
-    text-decoration: none;
     color: #fdc722;
 }
 
-/* 1.2. Side menu (para otras páginas, lo dejo igual) */
+/* 1.2. Side menu */
 .page {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 0;
+    display: block;          
 }
 
 .main-content {
@@ -161,12 +172,10 @@ header nav ul li.current > a::after {
     color: #fff;
     margin: 0;
     padding: 0;
-    border: none;
     min-height: 100%;
 }
 
 .side-nav h2 {
-    margin: 0;
     padding: 16px 16px 8px;
     font-size: 1.6rem;
     font-weight: 700;
@@ -174,12 +183,10 @@ header nav ul li.current > a::after {
 
 .side-nav ul {
     list-style: none;
-    margin: 0;
     padding: 0 16px 16px;
 }
 
 .side-nav ul li {
-    margin: 0;
     padding: 6px 0;
 }
 
@@ -194,7 +201,7 @@ header nav ul li.current > a::after {
     background-color: #247132;
 }
 
-/* 2.---------------------- Main / Home content ---------------------- */
+/* 2.---------------------- Home content ---------------------- */
 
 #page-title {
     font-size: 2rem;
@@ -202,7 +209,6 @@ header nav ul li.current > a::after {
     margin-bottom: 24px;
 }
 
-/* sticky verde */
 .home-sticky-box {
     position: sticky;
     top: 120px;
@@ -244,6 +250,7 @@ header nav ul li.current > a::after {
 }
 
 /* 3.---------------------- Footer ---------------------- */
+
 #main-footer {
     background-color: #000000;
     color: #717171;
@@ -251,19 +258,15 @@ header nav ul li.current > a::after {
     padding: 16px 0 24px;
     margin: 0;
     width: 100%;
-}
 
-#main-footer nav {
-    background: none;
-    padding: 0;
-    margin: 0 auto;
+    position: absolute;  
+    bottom: 0;
+    left: 0;
 }
 
 #main-footer nav ul {
     display: inline-block;
     list-style: none;
-    margin: 4px;
-    padding: 0;
 }
 
 #main-footer nav ul li {
@@ -272,12 +275,11 @@ header nav ul li.current > a::after {
 }
 
 #main-footer nav ul li a {
-    color: #f1d06d /*rgba(255, 249, 249, 0.667)*/;
+    color: #f1d06d;
     text-decoration: none;
     font-size: 0.7rem;
 }
 
-/* Line separation */
 .footer-line {
   border: none;
   border-top: 1px solid rgba(203, 201, 201, 0.4);
@@ -285,16 +287,13 @@ header nav ul li.current > a::after {
   margin: 8px auto 12px;
 }
 
-/* Last Line Text */
 #main-footer p {
     font-size: 0.7rem;
-    margin: 0;
     padding-top: 8px;
 }
 
 /* 4.---------------------- About / Contact / Products ---------------------- */
 
-/* contenedores principales (cuerpo de las páginas) */
 .about-main,
 .contact-main,
 .products-main {
@@ -302,42 +301,51 @@ header nav ul li.current > a::after {
     margin: 0 auto;
 }
 
-/* títulos de sección */
 .about-subtitle,
 .contact-subtitle,
 .products-subtitle {
-    margin-top: 70px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 16px;
 }
 
-/* textos de contenido */
-.about-text,
-.contact-text,
-.products-text {
-    line-height: 1.6;
-    margin-bottom: 16px;
+/* Texto general */
+.about-main p,
+.contact-main p,
+.products-main p {
+    margin-bottom: 12px;
+    text-align: justify;
 }
 
-/* imágenes flotadas reutilizables */
-.img-float-left {
+/* Floats */
+.float-left {
     float: left;
-    width: 220px;
-    margin: 0 16px 16px 0;
-    display: block;
+    margin: 0 16px 8px 0;
 }
 
-.img-float-right {
+.float-right {
     float: right;
-    width: 220px;
-    margin: 0 0 16px 16px;
-    display: block;
+    margin: 0 0 8px 16px;
 }
 
-/* tercera imagen en Products que limpia los floats */
-.product-image-clear {
+.about-image,
+.contact-image,
+.product-image {
+    max-width: 40%;
+    height: auto;
+}
+
+.products-content .product-image {
+    max-width: 30%;
+}
+
+.about-main::after,
+.contact-main::after,
+.products-main::after {
+    content: "";
     display: block;
-    max-width: 320px;
-    margin: 24px auto 16px;
+    clear: both;
+}
+
+.clear-both {
     clear: both;
 }

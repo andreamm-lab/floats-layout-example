@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starbucks - About</title>
+  <title>Starbucks - Contact</title>
   <link rel="icon" type="image/png" href="../images/Logo-Starbucks-Black.png">
   <link rel="stylesheet" href="../main.css">
 </head>
@@ -12,53 +12,51 @@
   <header>
     <nav aria-label="Primary navigation">
       <a href="../index.html">
-        <img src="../images/Logo-Starbucks-White.png" alt="Logo">
+        <img src="../images/Logo-Starbucks-Golden.png" alt="Logo">
       </a>
       <span class="spacer"></span>
       <ul>
         <li><a href="../index.html">Home</a></li>
-        <li class="current"><a href="../pages/about.html">About</a></li>
+        <li><a href="./about.html">About</a></li>
         <li id="products-li">
-          <a href="../pages/products.html">Products</a>
-          <!-- Submenu -->
+          <a href="./products.html">Products</a>
           <ul id="products-menu">
             <li><a href="#">Drinks</a></li>
             <li><a href="#">Food</a></li>
             <li><a href="#">At Home</a></li>
           </ul>
         </li>
-        <li><a href="../pages/contact.html">Contact</a></li>
+        <li class="current"><a href="./contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!------------------------------------ Content -------------------------------->
-  <main class="about-main">
-    <!-- page title  -->
-    <h1 class="about-subtitle">About</h1>
+  <main class="contact-main">
+    <h1 class="contact-subtitle">Contact</h1>
 
-    <section class="about-content">
+    <!-- CONTENIDO CON IMAGEN FLOTADA A LA DERECHA -->
+    <section class="contact-content">
       <img
-        src="../images/Home-Body-1.jpg"
-        alt="Barista preparing a cup of coffee"
-        class="img-float-left"
+        src="../images/contact-barista.jpg"
+        alt="Barista serving coffee"
+        class="contact-image float-right"
       >
-      <p class="about-text">
-        Our Starbucks-inspired coffee shop is a cozy place where you can enjoy
-        handcrafted beverages, freshly baked pastries, and a warm atmosphere.
-        We focus on high-quality coffee beans, ethical sourcing, and friendly
-        service so that every visit feels special.
+      <p>
+        We would love to hear from you. If you have questions about our menu,
+        catering options, or events, feel free to reach out using any of the
+        channels below. Our team is always happy to help you plan your next visit.
       </p>
-      <p class="about-text">
-        Whether you are catching up with friends, working on your laptop, or
-        taking a quiet moment for yourself, our space is designed to make you
-        feel welcome. Grab your favorite drink, find a comfortable seat, and
-        make this café your home away from home.
+      <p>
+        Email: info@starbucks-example.com<br>
+        Phone: +1 (604) 555-1234<br>
+        Address: 123 Coffee Street, Vancouver, BC
+      </p>
+      <p>
+        You can also follow us on social media to stay updated about seasonal
+        drinks, promotions, and special events happening at our café.
       </p>
     </section>
-
-    <!-- button back to top -->
-    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
   </main>
 
   <!---------------------------------- Footer ------------------------------------>

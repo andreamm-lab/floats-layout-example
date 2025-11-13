@@ -311,19 +311,11 @@ header nav ul li.current > a::after {
     margin-bottom: 16px;
 }
 
-.about-subtitle {
-    margin-left: 180px; /* empuja el título a la derecha de la imagen */
-    margin-bottom: 12px;
-}
-
-
 .about-content p {
     text-align: justify;
 }
 
-.products-content p {
-    text-align: justify;
-}
+
 /* textos de contenido */
 .about-text,
 .contact-text,

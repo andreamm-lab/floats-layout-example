@@ -321,9 +321,7 @@ header nav ul li.current > a::after {
     text-align: justify;
 }
 
-.products-content p {
-    text-align: justify;
-}
+
 /* textos de contenido */
 .about-text,
 .contact-text,
